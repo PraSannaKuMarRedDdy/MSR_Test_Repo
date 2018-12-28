@@ -1,4 +1,5 @@
-This is the test repository for creating an infrastructure with Cloud formation
+**MSR_COSMO Task**
+This is the test repository for creating an infrastructure with Cloud formation and install the packages for using Ansible playbook
 
 **Deploy the packages using Ansible**
 
@@ -11,3 +12,13 @@ $ sudo apt-get update
 $ sudo apt-get install software-properties-common
 
 $ sudo apt-add-repository ppa:ansible/ansible
+
+Press ENTER to accept the PPA addition.
+
+Next, we need to refresh our system's package index so that it is aware of the packages available in the PPA. Afterwards, we can install the software:
+
+$ sudo apt-get update
+
+$ sudo apt-get install ansible
+
+
