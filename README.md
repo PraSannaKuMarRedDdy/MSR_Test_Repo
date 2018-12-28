@@ -1,10 +1,10 @@
 This is the test repository for creating an infrastructure with Cloud formation
 
-**Deploy the packages using Ansible
+**Deploy the packages using Ansible**
 
 Ansible works by configuring client machines from an computer with Ansible components installed and configured.
 
-**Install Ansible in Ubuntu
+**Install Ansible in Ubuntu**
 
 $ sudo apt-get update
 
