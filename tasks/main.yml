@@ -14,17 +14,3 @@
     - config
     - openssl-config
 
-- import_tasks: manage.yml
-  tags:
-    - system
-    - openssl
-    - manage
-    - openssl-manage
-
-- import_tasks: cacert.yml
-  tags:
-    - system
-    - openssl
-    - cacert
-    - openssl-cacert
-  when: openssl_cacert_import
