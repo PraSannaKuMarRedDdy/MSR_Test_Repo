@@ -4,6 +4,25 @@
 
 It is a set of [ansible](http://www.ansible.com/home) playbooks showing you how to create certain full server stacks.
 
+## Prerequisites
+
+First of all, local server should be able to access to remote server over SSH so let's do it.
+
+Generating a SHH key
+
+# Current status on local
+ansible@local:~$ ls -l ~/.ssh/
+-rw------- 1 ansible ansible 389 Mar 24 09:17 authorized_keys
+ 
+# Generate SSH keypair on local
+ansible@local:~$ ssh-keygen -t rsa
+ 
+# New status on local
+ansible@local:~$ ls -l ~/.ssh/
+-rw------- 1 ansible ansible  389 Mar 24 09:17 authorized_keys
+-rw------- 1 ansible ansible 1679 Mar 24 09:29 id_rsa
+-rw-r--r-- 1 ansible ansible  394 Mar 24 09:29 id_rsa.pub
+
 ## Installation
 
 #### Installing ansible through a self built debian package
