@@ -1,6 +1,10 @@
-**MSR_COSMO Task**
+##MSR_COSMO Task**
 ___________________________
-This is the test repository for creating an infrastructure with Cloud formation and install the packages for using Ansible playbook
+
+***What is ansible-playbooks?****
+
+It is a set of ansible playbooks showing you how to create certain full server stacks.
+
 
 **Deploy the packages using Ansible**
 
@@ -23,6 +27,5 @@ $ sudo apt-get update
 $ sudo apt-get install ansible
 ___________________________________________________________________________________
 
-**Provisioning the packages the server**
 
 
