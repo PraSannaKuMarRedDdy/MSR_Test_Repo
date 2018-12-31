@@ -1,0 +1,32 @@
+---
+
+- name: Installing packages
+  package:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - openssl
+      - python-openssl
+
+- name: Creating certs dir
+  import_tasks: create_dir.yml
+  vars:
+    item: "{{ openssl_certs_path }}"
+    mode: "0755"
+
+- name: Creating keys dir
+  import_tasks: create_dir.yml
+  vars:
+    item: "{{ openssl_keys_path }}"
+    mode: "0700"
+
+- name: Creating csrs dir
+  when: openssl_generate_csr
+  import_tasks: create_dir.yml
+  vars:
+    item: "{{ openssl_csrs_path }}"
+    mode: "0750"
+    
+- name: install  git
+     yum: name=git state=present
