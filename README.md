@@ -1,31 +1,45 @@
 ## MSR_COSMO Task
-___________________________
 
 ***What is ansible-playbooks?****
 
-It is a set of ansible playbooks showing you how to create certain full server stacks.
+It is a set of [ansible](http://www.ansible.com/home) playbooks showing you how to create certain full server stacks.
 
+## Installation
 
-**Deploy the packages using Ansible**
+#### Installing ansible through a self built debian package
 
-Ansible works by configuring client machines from an computer with Ansible components installed and configured.
+You may want to check what the latest stable version of ansible is before copying and running this command. Adjust the version at the end of the command.
 
-**Install Ansible in Ubuntu**
+`curl -s https://raw.githubusercontent.com/nickjj/ansible-playbooks/master/ansible-install.sh | bash /dev/stdin v1.6.2`
 
-$ sudo apt-get update
+Afterwards verify that ansible is installed by running `ansible --version`.
 
-$ sudo apt-get install software-properties-common
+#### Cloning this repo
 
-$ sudo apt-add-repository ppa:ansible/ansible
+`$ git clone https://github.com/nickjj/ansible-playbooks.git`
 
-Press ENTER to accept the PPA addition.
+#### Doing everything as a 1 liner
 
-Next, we need to refresh our system's package index so that it is aware of the packages available in the PPA. Afterwards, we can install the software:
+Goto a directory where you want the playbook to be git cloned and then run this command:
 
-$ sudo apt-get update
+`curl -s https://raw.githubusercontent.com/nickjj/ansible-playbooks/master/ansible-install.sh | bash /dev/stdin v1.6.2 && git clone https://github.com/nickjj/ansible-playbooks.git`
 
-$ sudo apt-get install ansible
-___________________________________________________________________________________
+#### File structure break down
 
-
+$ tree
+.
+└── provisioning
+    ├── host_vars
+    │   └── remote
+    ├── hosts.yml
+    ├── roles
+    │   └── setup
+    │       ├── handlers
+    │       │   └── main.yml
+    │       └── tasks
+    │           ├── docker.yml
+    │           └── main.yml
+    └── site.yml
+    
+ 
 
