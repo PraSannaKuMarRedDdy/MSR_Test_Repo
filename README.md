@@ -14,7 +14,7 @@ ansible@local:~$ ssh-keygen -t rsa
 
 Transferring public key
 
-***ubuntu@remote:~$ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDUkN ansible@local' >> ~/.ssh/authorized_keys***
+ubuntu@remote:~$ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDUkN ansible@local' >> ~/.ssh/authorized_keys
 
 Testing SSH connection
 
@@ -78,3 +78,6 @@ This is the playbook. It consists of 1 or more plays. A play is a series of task
 
 This is what I like to label as configuration data. Sensitive information may or may not be included here and may or may not be checked into version control. It's up to you. It is very beneficial to be able to use the same playbook for many different sites. Having your inventory isolated away from the playbook allows you to do this.
 
+### Build
+
+$ ansible-playbook provisioning/site.yml -i provisioning/hosts.yml
