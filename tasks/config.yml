@@ -1,0 +1,7 @@
+---
+
+- name: Configuring
+  template:
+    owner: slave1
+    group: slave1
+    mode: 0644
