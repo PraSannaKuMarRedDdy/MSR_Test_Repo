@@ -20,5 +20,8 @@ Next, we need to refresh our system's package index so that it is aware of the p
 $ sudo apt-get update
 
 $ sudo apt-get install ansible
+___________________________________________________________________________________
+
+**Provisioning the packages the server**
 
 
