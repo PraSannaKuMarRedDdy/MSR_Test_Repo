@@ -39,6 +39,9 @@ Goto a directory where you want the playbook to be git cloned and then run this 
                 │       └── tasks
                 │           ├── docker.yml
                 │           └── main.yml
+                │           └── config.yml
+                │           └── install.yml
+                │           └── nvm&node.yml
                 └── site.yml
 
  
