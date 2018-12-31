@@ -1,0 +1,16 @@
+---
+
+- name: Installing packages
+  package:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - openssl
+      - python-openssl
+
+- name: Creating certs dir
+  import_tasks: create_dir.yml
+  vars:
+    item: "{{ openssl_certs_path }}"
+    mode: "0755"
