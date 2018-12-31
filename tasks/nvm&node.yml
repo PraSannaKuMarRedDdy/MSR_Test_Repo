@@ -3,6 +3,7 @@
 # Here is how to install nvm and node in an Ansible task.
 # I tried a bunch of different things, and as usual it's simple, but you have to get it right.
 # The important part is that you have to shell with /bin/bash -c and source nvm.sh
+# nvm_user: the user with .nvm install
 ---
 - hosts:<Give hosts IP (or) hostname>
 - name: Install nvm
@@ -13,3 +14,11 @@
   shell: >
     /bin/bash -c "source ~/.nvm/nvm.sh && nvm install 0.10 && nvm alias default 0.10"
     creates=/home/{{ ansible_user_id }}/.nvm/alias
+- name: install nodejs using nvm  
+  sudo: yes
+  sudo_user: ""
+  command: bash -c '. ~/.nvm/nvm.sh; nvm install '
+- name: set default node version
+  sudo: yes
+  sudo_user: ""
+  command: bash -c '. ~/.nvm/nvm.sh; nvm alias default '
