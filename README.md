@@ -43,3 +43,17 @@ Goto a directory where you want the playbook to be git cloned and then run this 
 
  
 
+## General information and terminology
+
+#### The `hosts` file
+
+You will need to put the IP address of each server in the `hosts` file. If you only plan to spin up 1 server then you can just use the same IP address for each group. Setting up a dynamic hosts file is out of scope and is well documented elsewhere.
+
+#### The `site.yml` file
+
+This is the playbook. It consists of 1 or more plays. A play is a series of tasks associated to a group of servers. The tasks themselves could be inside of roles. It is fairly common to see and say "A play has many roles and each role has many tasks".
+
+#### The `inventory` directory
+
+This is what I like to label as configuration data. Sensitive information may or may not be included here and may or may not be checked into version control. It's up to you. It is very beneficial to be able to use the same playbook for many different sites. Having your inventory isolated away from the playbook allows you to do this.
+
