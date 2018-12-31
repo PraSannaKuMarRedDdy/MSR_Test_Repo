@@ -1,4 +1,5 @@
 **MSR_COSMO Task**
+___________________________
 This is the test repository for creating an infrastructure with Cloud formation and install the packages for using Ansible playbook
 
 **Deploy the packages using Ansible**
