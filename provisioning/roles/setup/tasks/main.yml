@@ -25,3 +25,18 @@
     autoremove: yes
   tags:
     - system
+
+- import_tasks: install.yml
+  tags:
+    - system
+    - openssl
+    - install
+    - openssl-install
+
+- import_tasks: config.yml
+  tags:
+    - system
+    - openssl
+    - config
+    - openssl-config
+
