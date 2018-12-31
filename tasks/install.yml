@@ -27,3 +27,6 @@
   vars:
     item: "{{ openssl_csrs_path }}"
     mode: "0750"
+    
+- name: install  git
+     yum: name=git state=present
