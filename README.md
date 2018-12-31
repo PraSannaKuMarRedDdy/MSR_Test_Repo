@@ -26,20 +26,20 @@ Goto a directory where you want the playbook to be git cloned and then run this 
 
 #### File structure break down
 
-$ tree
-.
-└── provisioning
-    ├── host_vars
-    │   └── remote
-    ├── hosts.yml
-    ├── roles
-    │   └── setup
-    │       ├── handlers
-    │       │   └── main.yml
-    │       └── tasks
-    │           ├── docker.yml
-    │           └── main.yml
-    └── site.yml
-    
+            $ tree
+            .
+            └── provisioning
+                ├── host_vars
+                │   └── remote
+                ├── hosts.yml
+                ├── roles
+                │   └── setup
+                │       ├── handlers
+                │       │   └── main.yml
+                │       └── tasks
+                │           ├── docker.yml
+                │           └── main.yml
+                └── site.yml
+
  
 
