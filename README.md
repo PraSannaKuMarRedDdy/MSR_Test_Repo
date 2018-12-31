@@ -14,11 +14,11 @@ ubuntu@ip-10-20-1-66:~$ ssh-keygen -t rsa
 
 Transferring public key
 
-ubuntu@ip-10-20-1-66:~$ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDUkN ansible@local' >> ~/.ssh/authorized_keys
+ubuntu@ip-10-20-1-66:~$ echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDUkN ansible@ip-10-20-1-201' >> ~/.ssh/authorized_keys
 
 Testing SSH connection
 
-ubuntu@ip-10-20-1-66:~$ ssh ubuntu@192.168.99.30
+ubuntu@ip-10-20-1-66:~$ ssh ansible @10.20.1.201
 
 Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-92-generic x86_64)
 
